@@ -1,0 +1,5 @@
+-- DROP DATABASE
+DROP DATABASE IF EXISTS hero_outline_db;
+
+-- CREATE DATABASE
+CREATE DATABASE hero_outline_db;
