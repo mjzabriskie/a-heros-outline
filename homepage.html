@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>A Hero's Outline</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
@@ -22,25 +22,59 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link" href="#features">Features</a>
+            <a class="nav-link" href="#login">Login</a>
           </div>
         </div>
       </div>
     </nav>
-    <div class="text-center">
-      <img src="./images/20270-01-hero-journey-powerpoint-template-16x9-1.jpg" class="image-fluid"
-        alt="a hero's journey">
-    </div>
   </header>
   <main>
+    <div class="text-center">
+      <div class="bg-image p-5 text-center shadow-1-strong rounded text-black"
+        style="background-image: url('./images/20270-01-hero-journey-powerpoint-template-16x9-1.jpg'); background-repeat: no-repeat; background-position: center;">
+        <div class="row justify-content-between">
+          <div class="card bg-light bg-opacity-50 col-sm-4">
+            <div class="card-body">
+              <h1 class="">Complete Your Story</h1>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
+                labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
+                neque maiores dolorem unde? Aut dolorum quod excepturi fugit.
+              </p>
+            </div>
+          </div>
+          <div class="card col-sm-4 bg-light bg-opacity-50">
+            <div class="card-body">
+              <form>
+                <div class="mb-3">
+                  <legend>Sign Up</legend>
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputUsername1" class="form-label">Username</label>
+                  <input type="text" class="form-control" id="exampleInputUsermane1">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="text-center bg-light">
       <h1>What We Offer</h1>
       <p class="text-center mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi neque animi quo
         cupiditate commodi saepe culpa sed itaque velit maiores optio
         dolorem excepturi aperiam dolores, voluptatibus suscipit amet quis repellat!</p>
     </div>
-    <div class="text-center bg-secondary text-bg-dark">
+    <div class="text-center bg-secondary text-bg-dark" id="features">
       <h1>Features</h1>
       <p class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi neque animi quo cupiditate
         commodi saepe culpa sed itaque velit maiores optio
@@ -57,29 +91,10 @@
         dolorem excepturi aperiam dolores, voluptatibus suscipit amet quis repellat!
       </p>
     </div>
-    <div class="text-center bg-white">
-      <h1>Sign Up/Login</h1>
-      <div class="row">
-        <div class="card col-sm-6 bg-light">
-          <form>
-            <div class="mb-3">
-              <legend>Sign Up</legend>
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputUsername1" class="form-label">Username</label>
-              <input type="text" class="form-control" id="exampleInputUsermane1">
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
-        <div class="card col-sm-6 bg-light">
+    <div class="text-center bg-white" id="login">
+      <h1>Login</h1>
+      <div class="row justify-content-center m-0">
+        <div class="card col-sm-4 bg-light">
           <form>
             <div class="mb-3">
               <legend>Login</legend>
