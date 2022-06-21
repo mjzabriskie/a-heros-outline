@@ -32,7 +32,6 @@ router.get("/:id", withAuth, (req, res) => {
       res.render("outline", {
         outline,
         loggedIn: req.session.loggedIn,
-        currentUser: req.session.user_id,
       });
     })
     // Basic error catching
