@@ -24,10 +24,10 @@
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#features">Features</a>
+              <a class="nav-link" href="/#features">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#login">Login</a>
+              <a class="nav-link" href="/#login">Login</a>
             </li>
             {{#if loggedIn}}
               <li class="nav-item">
@@ -61,6 +61,10 @@
             </ul>
           </div>
           <script src="javascript/logout.js"></script>
+        {{else}}
+          <div
+            class="navbar-collapse collapse w-100 order-3 dual-collapse2 justify-content-end"
+          > </div>
         {{/if}}
       </nav>
     </header>
