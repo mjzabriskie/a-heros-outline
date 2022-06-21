@@ -8,34 +8,49 @@
     <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">A Hero's Outline</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mx-auto order-0">
+                <a class="navbar-brand mx-auto" href="#">A Hero's Outline</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#features">Features</a>
-                        <a class="nav-link" href="#login">Login</a>
-                        <a class="nav-link" href="#">Dashboard</a>
-                    </div>
-                </div>
+            </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 justify-content-end">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <button id="logout" class="nav-link btn btn-dark">Logout</button>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
     <main>
         <div class="text-center m-1">
             <h1>Dashboard</h1>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="row row-cols-1 row-cols-md-2 g-4 m-0">
                 <div class="col">
                     <div class="card mb-3 bg-light">
                         <div class="row g-0">
@@ -113,14 +128,16 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row m-0">
                 <div class="col-sm-12">
                     <div class="d-grid gap-2 col-6 mx-auto text-center">
-                        <button class="btn btn-success" id="singlebutton">Create New Outline <i class="fa-solid fa-square-plus"></i></button>
+                        <button class="btn btn-success" id="singlebutton">Create New Outline <i
+                                class="fa-solid fa-square-plus"></i></button>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 </body>
+
 </html>
