@@ -2,6 +2,12 @@ const router = require("express").Router();
 const { User, Outline } = require("../models");
 const withAuth = require("../utils/auth");
 
+router.get("/", (req, res) => {
+  res.render("outline", {
+    loggedIn: req.session.loggedIn,
+  });
+});
+
 // GET /outline/:id - gets a specific outline in the database to be viewed on a single outline page
 router.get("/:id", withAuth, (req, res) => {
   // Returns a specific outline from the database

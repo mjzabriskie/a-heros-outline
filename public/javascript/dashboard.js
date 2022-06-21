@@ -34,6 +34,12 @@ function viewOutline(event) {
   document.location.replace("/outline/" + event.target.dataset.id);
 }
 
+function newOutline(event) {
+  event.preventDefault();
+
+  document.location.replace("/outline/");
+}
+
 // Adds event listeners to the outline section to handle deleting and editing outlines
 document
   .querySelector("#outlineSection")
@@ -41,3 +47,4 @@ document
 document
   .querySelector("#outlineSection")
   .addEventListener("click", viewOutline);
+document.querySelector("#singlebutton").addEventListener("click", newOutline);
