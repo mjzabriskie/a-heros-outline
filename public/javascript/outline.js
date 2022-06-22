@@ -13,22 +13,20 @@ async function saveNewOutline(event) {
   event.preventDefault();
 
   const title = document.querySelector("#outline-title").value.trim();
-  const comfort_zone = document.querySelector("#outline-title").value.trim();
-  const character_desire = document
-    .querySelector("#outline-title")
-    .value.trim();
-  const new_situation = document.querySelector("#outline-title").value.trim();
-  const character_adapts = document
-    .querySelector("#outline-title")
-    .value.trim();
-  const gets_desire = document.querySelector("#outline-title").value.trim();
-  const heavy_price = document.querySelector("#outline-title").value.trim();
-  const familiar_situation = document
-    .querySelector("#outline-title")
-    .value.trim();
-  const character_changed = document
-    .querySelector("#outline-title")
-    .value.trim();
+  const comfort_zone =
+    document.querySelector("#comfortZone").value.trim() || "";
+  const character_desire =
+    document.querySelector("#characterDesire").value.trim() || "";
+  const new_situation =
+    document.querySelector("#newSituation").value.trim() || "";
+  const character_adapts =
+    document.querySelector("#characterAdapts").value.trim() || "";
+  const gets_desire = document.querySelector("#getsDesire").value.trim() || "";
+  const heavy_price = document.querySelector("#heavyPrice").value.trim() || "";
+  const familiar_situation =
+    document.querySelector("#familiarSituation").value.trim() || "";
+  const character_changed =
+    document.querySelector("#characterChanged").value.trim() || "";
 
   if (title) {
     const response = await fetch("/api/outlines/", {
@@ -51,6 +49,7 @@ async function saveNewOutline(event) {
     } else {
       alert(response.statusText);
     }
+    document.location.replace("/dashboard");
   }
 }
 
