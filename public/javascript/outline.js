@@ -1,6 +1,4 @@
 function clearTextarea(event) {
-  event.preventDefault();
-
   // Checks that the event target was a clear button
   if (!event.target.classList.contains("clear-btn")) {
     return;

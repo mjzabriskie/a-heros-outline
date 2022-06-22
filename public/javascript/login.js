@@ -6,22 +6,16 @@ async function signUpFormHandler(event) {
   const password = document.querySelector("#signUpPassword").value.trim();
 
   if (email && username && password) {
-    axios
-      .post("api/users", {
+    try {
+      const response = await axios.post("api/users", {
         email,
         username,
         password,
-      })
-      .then((response) => {
-        if (response.ok) {
-          document.location.replace("/dashboard");
-        } else {
-          alert(response.statusText);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
       });
+      document.location.replace("/dashboard");
+    } catch (err) {
+      console.log(err);
+    }
   }
 }
 
@@ -32,24 +26,17 @@ async function loginFormHandler(event) {
   const password = document.querySelector("#loginPassword").value.trim();
 
   if (email && password) {
-    const response = await fetch("api/users/login", {
-      method: "POST",
-      body: JSON.stringify({
+    try{
+      const response = await axios.post("api/users/login", {
         email,
         password,
-      }),
-      headers: { "Content-Type": "application/json" },
-    });
-
-    if (response.ok) {
+      });
       document.location.replace("/dashboard");
-    } else {
-      alert(response.statusText);
+    } catch (err) {
+      console.log(err);
     }
   }
 }
 
-document
-  .querySelector("#signUpBtn")
-  .addEventListener("click", signUpFormHandler);
+document.querySelector("#signUpBtn").addEventListener("click", signUpFormHandler);
 document.querySelector("#loginBtn").addEventListener("click", loginFormHandler);
