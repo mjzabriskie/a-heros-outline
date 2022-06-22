@@ -1,5 +1,3 @@
-console.log(axios);
-
 async function signUpFormHandler(event) {
   event.preventDefault();
 
@@ -24,20 +22,6 @@ async function signUpFormHandler(event) {
       .catch((err) => {
         console.log(err);
       });
-    // const response = await fetch("api/users", {
-    //   method: "POST",
-    //   body: JSON.stringify({
-    //     email,
-    //     username,
-    //     password,
-    //   }),
-    //   headers: { "Content-Type": "application/json" },
-    // });
-    // if (response.ok) {
-    //   document.location.replace("/dashboard");
-    // } else {
-    //   alert(response.statusText);
-    // }
   }
 }
 
