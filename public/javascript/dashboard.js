@@ -1,7 +1,5 @@
 // Function for deleting an outline
 async function deleteOutline(event) {
-  event.preventDefault();
-
   // Checks that the event target was a delete button
   if (!event.target.classList.contains("deleteOutline")) {
     return;
@@ -10,16 +8,12 @@ async function deleteOutline(event) {
   // Defines the URL to use for fetching using the data- variable containing the outline ID
   const fetchUrl = "/api/outlines/" + event.target.dataset.id;
 
-  // Sends a fetch request to delete the outline
-  const response = await fetch(fetchUrl, {
-    method: "DELETE",
-  });
-
-  // Reloads the page if the outline was successfully deleted - the outline will no longer display
-  if (response.ok) {
+  try {
+    // Sends a fetch request to delete the outline
+    const response = await axios.delete(fetchUrl);
     document.location.reload();
-  } else {
-    alert(response.statusText);
+  } catch (err) {
+    console.log(err);
   }
 }
 
