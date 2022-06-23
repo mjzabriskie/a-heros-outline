@@ -27,9 +27,8 @@ async function saveNewOutline(event) {
     document.querySelector("#characterChanged").value.trim() || "";
 
   if (title) {
-    const response = await fetch("/api/outlines/", {
-      method: "POST",
-      body: JSON.stringify({
+    try {
+      const response = await axios.post("/api/outlines/", {
         title,
         comfort_zone,
         character_desire,
@@ -39,15 +38,11 @@ async function saveNewOutline(event) {
         heavy_price,
         familiar_situation,
         character_changed,
-      }),
-      headers: { "Content-Type": "application/json" },
-    });
-
-    if (response.ok) {
-    } else {
-      alert(response.statusText);
+      });
+      document.location.replace("/dashboard");
+    } catch (err) {
+      console.log(err);
     }
-    document.location.replace("/dashboard");
   }
 }
 
@@ -73,9 +68,8 @@ async function saveOldOutline(event) {
   const fetchUrl = "/api/outlines/" + event.target.dataset.id;
 
   if (title) {
-    const response = await fetch(fetchUrl, {
-      method: "PUT",
-      body: JSON.stringify({
+    try {
+      const response = await axios.put(fetchUrl, {
         title,
         comfort_zone,
         character_desire,
@@ -85,12 +79,10 @@ async function saveOldOutline(event) {
         heavy_price,
         familiar_situation,
         character_changed,
-      }),
-      headers: { "Content-Type": "application/json" },
-    });
-
-    if (!response.ok) {
-      alert(response.statusText);
+      });
+      document.location.replace("/dashboard");
+    } catch (err) {
+      console.log(err);
     }
   }
 }
