@@ -1,9 +1,17 @@
 .bg-image {
-    height: 400px;
+    height: 500px;
 }
 
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
-  }
+}
+
+#features i {
+    font-size: 72px;
+}
+
+#features p {
+    text-align: left;
+}
