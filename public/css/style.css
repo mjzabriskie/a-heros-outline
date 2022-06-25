@@ -87,6 +87,11 @@
     background-color: #04AA6D;
 }
 
+.step-indicator {
+    text-align:center;
+    margin-top:40px;
+}
+
 .block {
     display: block;
 }

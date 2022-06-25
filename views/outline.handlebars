@@ -1,4 +1,4 @@
-<div class="">
+<div class="d-none">
   <div class="text-center">
     <h1>Outline</h1>
     <div class="row justify-content-center m-0">
@@ -136,13 +136,40 @@
     </div>
   </div>
   <div class="tab" style="display: none;">Birthday:
-    <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
-    <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
-    <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
+    <div class="form-group">
+      <label for="characterDesire">Character Desire</label>
+      <textarea class="form-control" id="characterDesire" rows="5">{{outline.character_desire}}</textarea>
+    </div>
   </div>
   <div class="tab" style="display: none;">Login Info:
-    <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
-    <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+    <div class="form-group">
+      <label for="newSituation">Enter Unfamiliar Situation</label>
+      <textarea class="form-control" id="newSituation" rows="5">{{outline.new_situation}}</textarea>
+    </div>
+  </div>
+  <div class="tab" style="display: none;">Login Info:
+    <div class="form-group">
+      <label for="getsDesire">Gets Desire</label>
+      <textarea class="form-control" id="getsDesire" rows="5">{{outline.gets_desire}}</textarea>
+    </div>
+  </div>
+  <div class="tab" style="display: none;">Login Info:
+    <div class="form-group">
+      <label for="heavyPrice">Pay Heavy Price</label>
+      <textarea class="form-control" id="heavyPrice" rows="5">{{outline.heavy_price}}</textarea>
+    </div>
+  </div>
+  <div class="tab" style="display: none;">Login Info:
+    <div class="form-group">
+      <label for="familiarSituation">Return to Familiar Situation</label>
+      <textarea class="form-control" id="familiarSituation" rows="5">{{outline.familiar_situation}}</textarea>
+    </div>
+  </div>
+  <div class="tab" style="display: none;">Login Info:
+    <div class="form-group">
+      <label for="characterChanged">Character Changed</label>
+      <textarea class="form-control" id="characterChanged" rows="5">{{outline.character_changed}}</textarea>
+    </div>
   </div>
   <div style="overflow:auto;">
     <div style="float:right;">
@@ -151,7 +178,11 @@
     </div>
   </div>
   <!-- Circles which indicates the steps of the form: -->
-  <div style="text-align:center;margin-top:40px;">
+  <div class="step-indicator">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
     <span class="step"></span>
     <span class="step"></span>
     <span class="step"></span>
