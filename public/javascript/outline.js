@@ -107,16 +107,23 @@ function showStep(n) {
   } else {
     document.getElementById("prevBtn").style.display = "inline";
   }
-  if (n == (x.length - 1)) {
+  if (n == x.length - 1) {
     document.getElementById("nextBtn").textContent = "Finish";
   } else {
     document.getElementById("nextBtn").textContent = "Next";
   }
   //... and run a function that will display the correct step indicator:
-  fixStepIndicator(n)
+  fixStepIndicator(n);
 }
 
-function nextPrev(n) {
+function nextPrev(event) {
+  let n;
+  console.log(event.target.id);
+  if (event.target.id == "nextBtn") {
+    n = 1;
+  } else {
+    n = -1;
+  }
   // This function will figure out which tab to display
   var x = document.getElementsByClassName("tab");
   // Exit the function if any field in the current tab is invalid:
@@ -136,13 +143,14 @@ function nextPrev(n) {
 }
 
 function validateForm() {
-    document.getElementsByClassName("step")[currStep].className += " finish";
+  document.getElementsByClassName("step")[currStep].className += " finish";
   return true; // return the valid status
 }
 
 function fixStepIndicator(n) {
   // This function removes the "active" class of all steps...
-  var i, x = document.getElementsByClassName("step");
+  var i,
+    x = document.getElementsByClassName("step");
   for (i = 0; i < x.length; i++) {
     x[i].className = x[i].className.replace(" active", "");
   }
@@ -156,3 +164,5 @@ document
 document
   .querySelector("#singlebutton")
   .addEventListener("click", saveButtonHandler);
+document.querySelector("#nextBtn").addEventListener("click", nextPrev);
+document.querySelector("#prevBtn").addEventListener("click", nextPrev);

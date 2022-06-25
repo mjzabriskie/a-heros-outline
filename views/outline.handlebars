@@ -1,4 +1,4 @@
-<div class="d-none">
+<div class="">
   <div class="text-center">
     <h1>Outline</h1>
     <div class="row justify-content-center m-0">
@@ -125,56 +125,56 @@
   <!-- One "tab" for each step in the form: -->
   <div class="tab" style="display: none;">Name:
     <div class="form-group">
-      <label for="comfortZone">Comfort Zone</label>
-      <textarea class="form-control" id="comfortZone" rows="5">{{outline.comfort_zone}}</textarea>
+      <label for="comfortZoneWiz">Comfort Zone</label>
+      <textarea class="form-control" id="comfortZoneWiz" rows="5">{{outline.comfort_zone}}</textarea>
     </div>
   </div>
   <div class="tab" style="display: none;">Contact Info:
     <div class="form-group">
-      <label for="characterDesire">Character Desire</label>
-      <textarea class="form-control" id="characterDesire" rows="5">{{outline.character_desire}}</textarea>
+      <label for="characterDesireWiz">Character Desire</label>
+      <textarea class="form-control" id="characterDesireWiz" rows="5">{{outline.character_desire}}</textarea>
+    </div>
+  </div>
+  <div class="tab" style="display: none;">Login Info:
+    <div class="form-group">
+      <label for="newSituationWiz">Enter Unfamiliar Situation</label>
+      <textarea class="form-control" id="newSituationWiz" rows="5">{{outline.new_situation}}</textarea>
     </div>
   </div>
   <div class="tab" style="display: none;">Birthday:
     <div class="form-group">
-      <label for="characterDesire">Character Desire</label>
-      <textarea class="form-control" id="characterDesire" rows="5">{{outline.character_desire}}</textarea>
+      <label for="characterAdaptsWiz">Character Adapts</label>
+      <textarea class="form-control" id="characterAdaptsWiz" rows="5">{{outline.character_adapts}}</textarea>
     </div>
   </div>
   <div class="tab" style="display: none;">Login Info:
     <div class="form-group">
-      <label for="newSituation">Enter Unfamiliar Situation</label>
-      <textarea class="form-control" id="newSituation" rows="5">{{outline.new_situation}}</textarea>
+      <label for="getsDesireWiz">Gets Desire</label>
+      <textarea class="form-control" id="getsDesireWiz" rows="5">{{outline.gets_desire}}</textarea>
     </div>
   </div>
   <div class="tab" style="display: none;">Login Info:
     <div class="form-group">
-      <label for="getsDesire">Gets Desire</label>
-      <textarea class="form-control" id="getsDesire" rows="5">{{outline.gets_desire}}</textarea>
+      <label for="heavyPriceWiz">Pay Heavy Price</label>
+      <textarea class="form-control" id="heavyPriceWiz" rows="5">{{outline.heavy_price}}</textarea>
     </div>
   </div>
   <div class="tab" style="display: none;">Login Info:
     <div class="form-group">
-      <label for="heavyPrice">Pay Heavy Price</label>
-      <textarea class="form-control" id="heavyPrice" rows="5">{{outline.heavy_price}}</textarea>
+      <label for="familiarSituationWiz">Return to Familiar Situation</label>
+      <textarea class="form-control" id="familiarSituationWiz" rows="5">{{outline.familiar_situation}}</textarea>
     </div>
   </div>
   <div class="tab" style="display: none;">Login Info:
     <div class="form-group">
-      <label for="familiarSituation">Return to Familiar Situation</label>
-      <textarea class="form-control" id="familiarSituation" rows="5">{{outline.familiar_situation}}</textarea>
-    </div>
-  </div>
-  <div class="tab" style="display: none;">Login Info:
-    <div class="form-group">
-      <label for="characterChanged">Character Changed</label>
-      <textarea class="form-control" id="characterChanged" rows="5">{{outline.character_changed}}</textarea>
+      <label for="characterChangedWiz">Character Changed</label>
+      <textarea class="form-control" id="characterChangedWiz" rows="5">{{outline.character_changed}}</textarea>
     </div>
   </div>
   <div style="overflow:auto;">
     <div style="float:right;">
-      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      <button type="button" id="prevBtn">Previous</button>
+      <button type="button" id="nextBtn">Next</button>
     </div>
   </div>
   <!-- Circles which indicates the steps of the form: -->
