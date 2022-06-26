@@ -13,7 +13,7 @@
         <p class="card-text">Brief Description of story</p>
         {{#if (is_updated createdAt updatedAt)}}
           <p class="card-text"><small class="text-muted">Updated
-              {{format_date createdAt}}</small></p>
+              {{format_date updatedAt}}</small></p>
         {{else}}
           <p class="card-text"><small class="text-muted">Created
               {{format_date createdAt}}</small></p>
