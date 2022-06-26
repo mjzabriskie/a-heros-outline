@@ -31,7 +31,7 @@ function viewOutline(event) {
 function newOutline(event) {
   event.preventDefault();
 
-  document.location.replace("/outline/");
+  document.location.replace("/outline?newOutline=true");
 }
 
 // Adds event listeners to the outline section to handle deleting and editing outlines

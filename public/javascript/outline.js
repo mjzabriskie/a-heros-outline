@@ -1,10 +1,84 @@
-const outlineForm = document.querySelector("#outline-form");
-const wizardForm = document.querySelector("#wizard-form");
+const outlineFormEl = document.querySelector("#outline-form");
+const wizardFormEl = document.querySelector("#wizard-form");
+const prevBtn = document.querySelector("#prevBtn");
+const comfortZoneEl = document.querySelector("#comfortZone");
+const comfortZoneWizEl = document.querySelector("#comfortZoneWiz");
+const characterDesireEl = document.querySelector("#characterDesire");
+const characterDesireWizEl = document.querySelector("#characterDesireWiz");
+const newSituationEl = document.querySelector("#newSituation");
+const newSituationWizEl = document.querySelector("#newSituationWiz");
+const characterAdaptsEl = document.querySelector("#characterAdapts");
+const characterAdaptsWizEl = document.querySelector("#characterAdaptsWiz");
+const getsDesireEl = document.querySelector("#getsDesire");
+const getsDesireWizEl = document.querySelector("#getsDesireWiz");
+const heavyPriceEl = document.querySelector("#heavyPrice");
+const heavyPriceWizEl = document.querySelector("#heavyPriceWiz");
+const familiarSituationEl = document.querySelector("#familiarSituation");
+const familiarSituationWizEl = document.querySelector("#familiarSituationWiz");
+const characterChangedEl = document.querySelector("#characterChanged");
+const characterChangedWizEl = document.querySelector("#characterChangedWiz");
+
+comfortZoneEl.addEventListener('change', function () {
+  comfortZoneWizEl.value = this.value;
+});
+comfortZoneWizEl.addEventListener('change', function () {
+  comfortZoneEl.value = this.value;
+});
+
+characterDesireEl.addEventListener('change', function () {
+  characterDesireWizEl.value = this.value;
+});
+characterDesireWizEl.addEventListener('change', function () {
+  characterDesireEl.value = this.value;
+});
+
+newSituationEl.addEventListener('change', function () {
+  newSituationWizEl.value = this.value;
+});
+newSituationWizEl.addEventListener('change', function () {
+  newSituationEl.value = this.value;
+});
+
+characterAdaptsEl.addEventListener('change', function () {
+  characterAdaptsWizEl.value = this.value;
+});
+characterAdaptsWizEl.addEventListener('change', function () {
+  characterAdaptsEl.value = this.value;
+});
+
+getsDesireEl.addEventListener('change', function () {
+  getsDesireWizEl.value = this.value;
+});
+getsDesireWizEl.addEventListener('change', function () {
+  getsDesireEl.value = this.value;
+});
+
+heavyPriceEl.addEventListener('change', function () {
+  heavyPriceWizEl.value = this.value;
+});
+heavyPriceWizEl.addEventListener('change', function () {
+  heavyPriceEl.value = this.value;
+});
+
+familiarSituationEl.addEventListener('change', function () {
+  familiarSituationWizEl.value = this.value;
+});
+familiarSituationWizEl.addEventListener('change', function () {
+  familiarSituationEl.value = this.value;
+});
+
+characterChangedEl.addEventListener('change', function () {
+  characterChangedWizEl.value = this.value;
+});
+characterChangedWizEl.addEventListener('change', function () {
+  characterChangedEl.value = this.value;
+});
+
 
 if (window.location.search) {
-  wizardForm.classList.toggle("d-none");
+  wizardFormEl.classList.toggle("d-none");
 } else {
-  outlineForm.classList.toggle("d-none");
+  outlineFormEl.classList.toggle("d-none");
 }
 
 function clearTextarea(event) {
@@ -127,7 +201,7 @@ function showStep(n) {
 
 function nextPrev(event) {
   let n;
-  console.log(event.target.id);
+
   if (event.target.id == "nextBtn") {
     n = 1;
   } else {
@@ -141,11 +215,11 @@ function nextPrev(event) {
   x[currStep].style.display = "none";
   // Increase or decrease the current tab by 1:
   currStep = currStep + n;
+
   // if you have reached the end of the form...
   if (currStep >= x.length) {
     // ... the form gets submitted:
-    outlineForm.classList.toggle("d-none");
-    currStep = 0;
+    outlineFormEl.classList.toggle("d-none");
     return false;
   }
   // Otherwise, display the correct tab:
@@ -169,8 +243,8 @@ function fixStepIndicator(n) {
 }
 
 function wizardToggle() {
-  wizardForm.classList.toggle("d-none");
-  outlineForm.classList.toggle("d-none");
+  wizardFormEl.classList.toggle("d-none");
+  outlineFormEl.classList.toggle("d-none");
 }
 
 document
@@ -180,6 +254,6 @@ document
   .querySelector("#singlebutton")
   .addEventListener("click", saveButtonHandler);
 document.querySelector("#nextBtn").addEventListener("click", nextPrev);
-document.querySelector("#prevBtn").addEventListener("click", nextPrev);
+prevBtn.addEventListener("click", nextPrev);
 document.querySelector("#wizard-btn").addEventListener("click", wizardToggle);
 document.querySelector("#exit-btn").addEventListener("click", wizardToggle);
