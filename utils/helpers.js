@@ -9,7 +9,7 @@ module.exports = {
     // Formats the time to show how long ago the date passed into the function was
     return formatDistance(date, currentTime, { addSuffix: true });
   },
-  // Checks the createdAt and UpdatedAt variable to determine if an entry in one of the tables (posts or comments) was updated
+  // Checks the createdAt and UpdatedAt variable to determine if an outline was updated
   is_updated: (createdAt, updatedAt) => {
     // compareAsc will return -1 if updatedAt is after createdAt
     if (compareAsc(createdAt, updatedAt) === -1) {

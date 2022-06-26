@@ -25,7 +25,9 @@ const getsDesireWizEl = document.querySelector("#gets-desire-wiz");
 const heavyPriceEl = document.querySelector("#heavy-price");
 const heavyPriceWizEl = document.querySelector("#heavy-price-wiz");
 const familiarSituationEl = document.querySelector("#familiar-situation");
-const familiarSituationWizEl = document.querySelector("#familiar-situation-wiz");
+const familiarSituationWizEl = document.querySelector(
+  "#familiar-situation-wiz"
+);
 const characterChangedEl = document.querySelector("#character-changed");
 const characterChangedWizEl = document.querySelector("#character-changed-wiz");
 
@@ -82,18 +84,22 @@ async function saveNewOutline(event) {
 
   if (title) {
     try {
-      const response = await axios.post("/api/outlines/", {
-        title,
-        comfort_zone,
-        character_desire,
-        new_situation,
-        character_adapts,
-        gets_desire,
-        heavy_price,
-        familiar_situation,
-        character_changed,
-      });
-      document.location.replace("/dashboard");
+      const response = await axios
+        .post("/api/outlines/", {
+          title,
+          comfort_zone,
+          character_desire,
+          new_situation,
+          character_adapts,
+          gets_desire,
+          heavy_price,
+          familiar_situation,
+          character_changed,
+        })
+        // Redirects the user to the outline page for the newly saved outline
+        .then((outlineData) => {
+          document.location.replace("/outline/" + outlineData.data.id);
+        });
     } catch (err) {
       console.log(err);
     }
@@ -174,7 +180,10 @@ function nextPrev(event) {
   let n;
 
   //Stops user from continuing past number of tabs
-  if (nextBtnEl.textContent === "Finish" && event.target.textContent === "Finish") {
+  if (
+    nextBtnEl.textContent === "Finish" &&
+    event.target.textContent === "Finish"
+  ) {
     wizardToggle();
     return;
   }
@@ -226,7 +235,8 @@ exitBtnEl.addEventListener("click", wizardToggle);
 outlineTitleEl.addEventListener("change", function () {
   outlineTitleWizEl.value = this.value;
 });
-if (outlineTitleWizEl){//handlebars helper determins if this element is created
+if (outlineTitleWizEl) {
+  //handlebars helper determins if this element is created
   outlineTitleWizEl.addEventListener("change", function () {
     outlineTitleEl.value = this.value;
   });
