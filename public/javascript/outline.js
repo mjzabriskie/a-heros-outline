@@ -103,6 +103,18 @@ async function saveNewOutline(event) {
     } catch (err) {
       console.log(err);
     }
+  } else {
+    outlineTitleEl.classList.add("is-invalid");
+    document.body.scrollTop = 0;
+  }
+}
+
+function toggleVaild() {
+  if (outlineTitleEl.classList.contains("is-invalid")) {
+    outlineTitleEl.classList.remove("is-invalid");
+  }
+  if (outlineTitleEl.value.trim().length === 0) {
+    outlineTitleEl.classList.add("is-invalid");
   }
 }
 
@@ -139,6 +151,9 @@ async function saveOldOutline(event) {
     } catch (err) {
       console.log(err);
     }
+  } else {
+    outlineTitleEl.classList.add("is-invalid");
+    document.body.scrollTop = 0;
   }
 }
 
@@ -231,11 +246,14 @@ prevBtnEl.addEventListener("click", nextPrev);
 wizardBtnEl.addEventListener("click", wizardToggle);
 exitBtnEl.addEventListener("click", wizardToggle);
 
+outlineTitleEl.addEventListener("input", toggleVaild);
+
 //The following listeners synchronize changes between outline view and wizard view
 outlineTitleEl.addEventListener("change", function () {
   outlineTitleWizEl.value = this.value;
 });
-if (outlineTitleWizEl){//handlebars helper determines if this element is created
+if (outlineTitleWizEl) {
+  //handlebars helper determins if this element is created
   outlineTitleWizEl.addEventListener("change", function () {
     outlineTitleEl.value = this.value;
   });

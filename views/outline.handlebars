@@ -2,116 +2,167 @@
   <div class="text-center">
     <h1>Outline</h1>
     <div class="row justify-content-center m-0">
-      <div class="col-sm-4 mb-0">
-        <input class="form-control text-center" id="outline-title" placeholder="Outline Title (Required)"
-          value="{{outline.title}}" />
+      <div class="col-sm-4 mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="outline-title"
+          placeholder="Outline Title (Required)"
+          value="{{outline.title}}"
+        />
       </div>
     </div>
   </div>
   <div id="outline-section" class="container">
-    <div class="d-flex mb-2 justify-content-end">
-      <button class="btn btn-dark wizard-btn magic-color" id="wizard-btn"><i class="fa-solid fa-hat-wizard"></i> Wizard</button>
+    <div class="d-flex mb-1 justify-content-end">
+      <button class="btn btn-dark wizard-btn" id="wizard-btn"><i
+          class="fa-solid fa-hat-wizard"
+        ></i>
+        Wizard</button>
     </div>
 
-<div class="d-flex flex-wrap justify-content-between">
+    <div class="d-flex flex-wrap justify-content-between">
 
-        <div class="card card-box mb-3 col-md-6 col-sm-12 col-12">
-          <div class="card-header">
-            <label for="comfort-zone">1. Comfort Zone</label>
-          </div>
-          <div class="card-body">
-            <div class="form-group">
-              <textarea class="form-control" id="comfort-zone" rows="5">{{outline.comfort_zone}}</textarea>
-            </div>
-            <button class="btn btn-danger mt-1 clear-btn">Clear</button>
-          </div>
+      <div class="card card-box mb-3 col-md-6 col-sm-12 col-12">
+        <div class="card-header">
+          <label for="comfort-zone">1. Comfort Zone</label>
         </div>
-        <div class="card card-box mb-3 col-md-6 col-sm-12  col-12">
-          <div class="card-header">
-            <label for="character-desire">2. Character Desire</label>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="comfort-zone">Comfort Zone</label>
+            <textarea
+              class="form-control"
+              id="comfort-zone"
+              rows="5"
+            >{{outline.comfort_zone}}</textarea>
           </div>
-          <div class="card-body">
-            <div class="form-group">
-              <textarea class="form-control" id="character-desire" rows="5">{{outline.character_desire}}</textarea>
-            </div>
-            <button class="btn btn-danger mt-1 clear-btn">Clear</button>
-          </div>
+          <button class="btn btn-danger mt-1 clear-btn">Clear</button>
         </div>
-        <div class="card card-box mb-3 col-md-6 col-sm-12 col-12">
-          <div class="card-header">
-            <label for="new-situation">3. Enter Unfamiliar Situation</label>
-          </div>
-          <div class="card-body">
-            <div class="form-group">
-              <textarea class="form-control" id="new-situation" rows="5">{{outline.new_situation}}</textarea>
-            </div>
-            <button class="btn btn-danger mt-1 clear-btn">Clear</button>
-          </div>
+      </div>
+      <div class="card card-box mb-3 col-md-6 col-sm-12 col-12">
+        <div class="card-header">
+          <label for="character-desire">2. Character Desire</label>
         </div>
-        <div class="card card-box mb-3 col-md-6 col-sm-12 col-12">
-          <div class="card-header">
-            <label for="character-adapts">4. Character Adapts</label>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="character-desire">Character Desire</label>
+            <textarea
+              class="form-control"
+              id="character-desire"
+              rows="5"
+            >{{outline.character_desire}}</textarea>
           </div>
-          <div class="card-body">
-            <div class="form-group">
-              <textarea class="form-control" id="character-adapts" rows="5">{{outline.character_adapts}}</textarea>
-            </div>
-            <button class="btn btn-danger mt-1 clear-btn">Clear</button>
-          </div>
+          <button class="btn btn-danger mt-1 clear-btn">Clear</button>
         </div>
+      </div>
+      <div class="card card-box mb-3 col-md-6 col-sm-12 col-12">
+        <div class="card-header">
+          <label for="new-situation">3. Enter Unfamiliar Situation</label>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="new-situation">Enter Unfamiliar Situation</label>
+            <textarea
+              class="form-control"
+              id="new-situation"
+              rows="5"
+            >{{outline.new_situation}}</textarea>
+          </div>
+          <button class="btn btn-danger mt-1 clear-btn">Clear</button>
+        </div>
+      </div>
+      <div class="card card-box mb-3 col-md-6 col-sm-12 col-12">
+        <div class="card-header">
+          <label for="character-adapts">4. Character Adapts</label>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="character-adapts">Character Adapts</label>
+            <textarea
+              class="form-control"
+              id="character-adapts"
+              rows="5"
+            >{{outline.character_adapts}}</textarea>
+          </div>
+          <button class="btn btn-danger mt-1 clear-btn">Clear</button>
+        </div>
+      </div>
 
-
-        <div class="card card-box mb-3 col-md-6 col-sm-12 col-12">
-          <div class="card-header">
-            <label for="gets-desire">5. Gets Desire</label>
-          </div>
-          <div class="card-body">
-            <div class="form-group">
-              <textarea class="form-control" id="gets-desire" rows="5">{{outline.gets_desire}}</textarea>
-            </div>
-            <button class="btn btn-danger mt-1 clear-btn">Clear</button>
-          </div>
+      <div class="card card-box mb-3 col-md-6 col-sm-12 col-12">
+        <div class="card-header">
+          <label for="gets-desire">5. Gets Desire</label>
         </div>
-        <div class="card card-box mb-3 col-md-6 col-sm-12 col-12">
-          <div class="card-header">
-            <label for="heavy-price">6. Pay Heavy Price</label>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="gets-desire">Gets Desire</label>
+            <textarea
+              class="form-control"
+              id="gets-desire"
+              rows="5"
+            >{{outline.gets_desire}}</textarea>
           </div>
-          <div class="card-body">
-            <div class="form-group">
-              <textarea class="form-control" id="heavy-price" rows="5">{{outline.heavy_price}}</textarea>
-            </div>
-            <button class="btn btn-danger mt-1 clear-btn">Clear</button>
-          </div>
+          <button class="btn btn-danger mt-1 clear-btn">Clear</button>
         </div>
-        <div class="card card-box mb-3 col-md-6 col-sm-12 col-12">
-          <div class="card-header">
-            <label for="familiar-situation">7. Return to Familiar Situation</label>
-          </div>
-          <div class="card-body">
-            <div class="form-group">
-              <textarea class="form-control" id="familiar-situation" rows="5">{{outline.familiar_situation}}</textarea>
-            </div>
-            <button class="btn btn-danger mt-1 clear-btn">Clear</button>
-          </div>
+      </div>
+      <div class="card card-box mb-3 col-md-6 col-sm-12 col-12">
+        <div class="card-header">
+          <label for="heavy-price">6. Pay Heavy Price</label>
         </div>
-        <div class="card card-box mb-3 col-md-6 col-sm-12 col-12">
-          <div class="card-header">
-            <label for="character-changed">8. Character Changed</label>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="heavy-price">Pay Heavy Price</label>
+            <textarea
+              class="form-control"
+              id="heavy-price"
+              rows="5"
+            >{{outline.heavy_price}}</textarea>
           </div>
-          <div class="card-body">
-            <div class="form-group">
-              <textarea class="form-control" id="character-changed" rows="5">{{outline.character_changed}}</textarea>
-            </div>
-            <button class="btn btn-danger mt-1 clear-btn">Clear</button>
-          </div>
+          <button class="btn btn-danger mt-1 clear-btn">Clear</button>
         </div>
-</div>
+      </div>
+      <div class="card card-box mb-3 col-md-6 col-sm-12 col-12">
+        <div class="card-header">
+          <label for="familiar-situation">7. Return to Familiar Situation</label>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="familiar-situation">Return to Familiar Situation</label>
+            <textarea
+              class="form-control"
+              id="familiar-situation"
+              rows="5"
+            >{{outline.familiar_situation}}</textarea>
+          </div>
+          <button class="btn btn-danger mt-1 clear-btn">Clear</button>
+        </div>
+      </div>
+      <div class="card card-box mb-3 col-md-6 col-sm-12 col-12">
+        <div class="card-header">
+          <label for="character-changed">8. Character Changed</label>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="character-changed">Character Changed</label>
+            <textarea
+              class="form-control"
+              id="character-changed"
+              rows="5"
+            >{{outline.character_changed}}</textarea>
+          </div>
+          <button class="btn btn-danger mt-1 clear-btn">Clear</button>
+        </div>
+      </div>
+    </div>
 
   </div>
   <div class="row m-0">
     <div class="col-sm-12">
       <div class="d-grid gap-2 col-6 mx-auto text-center mb-3">
-        <button class="btn btn-success" id="save-outline-btn" data-id="{{outline.id}}">Save Outline</button>
+        <button
+          class="btn btn-success"
+          id="save-outline-btn"
+          data-id="{{outline.id}}"
+        >Save Outline</button>
       </div>
     </div>
   </div>
@@ -119,22 +170,22 @@
 <form class="container d-none" id="wizard-form">
   <h1 class="mb-4">Outline Wizard</h1>
   {{#if outline.title}}
-  <h2 class="text-center">{{outline.title}}</h2>
+    <h2 class="text-center">{{outline.title}}</h2>
   {{/if}}
   <!-- One "tab" for each step in the form: -->
   <div class="col-12 mx-auto">
     {{#unless outline.title}}
-    <div class="tab">
-      <div class="card">
-        <div class="text-center card-header">
-          <label class="h3" for="outline-title-wiz">Outline Title</label>
-        </div>
-        <div class="card-body title-tab">
-          <p>What is the name of your outline?</p>
-          <input class="form-control" id="outline-title-wiz" />
+      <div class="tab">
+        <div class="card">
+          <div class="text-center card-header">
+            <label class="h3" for="outline-title-wiz">Outline Title</label>
+          </div>
+          <div class="card-body title-tab">
+            <p>What is the name of your outline?</p>
+            <input class="form-control" id="outline-title-wiz" />
+          </div>
         </div>
       </div>
-    </div>
     {{/unless}}
     <div class="tab">
       <div class="card">
@@ -142,10 +193,15 @@
           <label class="h3" for="comfort-zone-wiz">Step 1: Comfort Zone</label>
         </div>
         <div class="card-body">
-          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sapiente quia est sint sed
-            illum ea, aliquam iusto ab veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum, consectetur
-            nam.</p>
-          <textarea class="form-control" id="comfort-zone-wiz" rows="5">{{outline.comfort_zone}}</textarea>
+          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Porro sapiente quia est sint sed illum ea, aliquam iusto ab
+            veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum,
+            consectetur nam.</p>
+          <textarea
+            class="form-control"
+            id="comfort-zone-wiz"
+            rows="5"
+          >{{outline.comfort_zone}}</textarea>
         </div>
       </div>
     </div>
@@ -155,23 +211,34 @@
           <label class="h3" for="character-desire-wiz">Step 2: Character Desire</label>
         </div>
         <div class="card-body">
-          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sapiente quia est sint sed
-            illum ea, aliquam iusto ab veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum, consectetur
-            nam.</p>
-          <textarea class="form-control" id="character-desire-wiz" rows="5">{{outline.character_desire}}</textarea>
+          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Porro sapiente quia est sint sed illum ea, aliquam iusto ab
+            veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum,
+            consectetur nam.</p>
+          <textarea
+            class="form-control"
+            id="character-desire-wiz"
+            rows="5"
+          >{{outline.character_desire}}</textarea>
         </div>
       </div>
     </div>
     <div class="tab">
       <div class="card">
         <div class="text-center card-header">
-          <label class="h3" for="new-situation-wiz">Step 3: Enter Unfamiliar Situation</label>
+          <label class="h3" for="new-situation-wiz">Step 3: Enter Unfamiliar
+            Situation</label>
         </div>
         <div class="card-body">
-          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sapiente quia est sint sed
-            illum ea, aliquam iusto ab veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum, consectetur
-            nam.</p>
-          <textarea class="form-control" id="new-situation-wiz" rows="5">{{outline.new_situation}}</textarea>
+          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Porro sapiente quia est sint sed illum ea, aliquam iusto ab
+            veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum,
+            consectetur nam.</p>
+          <textarea
+            class="form-control"
+            id="new-situation-wiz"
+            rows="5"
+          >{{outline.new_situation}}</textarea>
         </div>
       </div>
     </div>
@@ -181,10 +248,15 @@
           <label class="h3" for="character-adapts-wiz">Step 4: Character Adapts</label>
         </div>
         <div class="card-body">
-          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sapiente quia est sint sed
-            illum ea, aliquam iusto ab veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum, consectetur
-            nam.</p>
-          <textarea class="form-control" id="character-adapts-wiz" rows="5">{{outline.character_adapts}}</textarea>
+          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Porro sapiente quia est sint sed illum ea, aliquam iusto ab
+            veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum,
+            consectetur nam.</p>
+          <textarea
+            class="form-control"
+            id="character-adapts-wiz"
+            rows="5"
+          >{{outline.character_adapts}}</textarea>
         </div>
       </div>
     </div>
@@ -194,10 +266,15 @@
           <label class="h3" for="gets-desire-wiz">Step 5: Gets Desire</label>
         </div>
         <div class="card-body">
-          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sapiente quia est sint sed
-            illum ea, aliquam iusto ab veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum, consectetur
-            nam.</p>
-          <textarea class="form-control" id="gets-desire-wiz" rows="5">{{outline.gets_desire}}</textarea>
+          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Porro sapiente quia est sint sed illum ea, aliquam iusto ab
+            veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum,
+            consectetur nam.</p>
+          <textarea
+            class="form-control"
+            id="gets-desire-wiz"
+            rows="5"
+          >{{outline.gets_desire}}</textarea>
         </div>
       </div>
     </div>
@@ -207,52 +284,81 @@
           <label class="h3" for="heavy-price-wiz">Step 6: Pay Heavy Price</label>
         </div>
         <div class="card-body">
-          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sapiente quia est sint sed
-            illum ea, aliquam iusto ab veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum, consectetur
-            nam.</p>
-          <textarea class="form-control" id="heavy-price-wiz" rows="5">{{outline.heavy_price}}</textarea>
+          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Porro sapiente quia est sint sed illum ea, aliquam iusto ab
+            veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum,
+            consectetur nam.</p>
+          <textarea
+            class="form-control"
+            id="heavy-price-wiz"
+            rows="5"
+          >{{outline.heavy_price}}</textarea>
         </div>
       </div>
     </div>
     <div class="tab">
       <div class="card">
         <div class="text-center card-header">
-          <label class="h3" for="familiar-situation-wiz">Step 7: Return to Familiar Situation</label>
+          <label class="h3" for="familiar-situation-wiz">Step 7: Return to
+            Familiar Situation</label>
         </div>
         <div class="card-body">
-          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sapiente quia est sint sed
-            illum ea, aliquam iusto ab veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum, consectetur
-            nam.</p>
-          <textarea class="form-control" id="familiar-situation-wiz" rows="5">{{outline.familiar_situation}}</textarea>
+          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Porro sapiente quia est sint sed illum ea, aliquam iusto ab
+            veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum,
+            consectetur nam.</p>
+          <textarea
+            class="form-control"
+            id="familiar-situation-wiz"
+            rows="5"
+          >{{outline.familiar_situation}}</textarea>
         </div>
       </div>
     </div>
     <div class="tab">
       <div class="card">
         <div class="text-center card-header">
-          <label class="h3" for="character-changed-wiz">Step 8: Character Changed</label>
+          <label class="h3" for="character-changed-wiz">Step 8: Character
+            Changed</label>
         </div>
         <div class="card-body">
-          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sapiente quia est sint sed
-            illum ea, aliquam iusto ab veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum, consectetur
-            nam.</p>
-          <textarea class="form-control" id="character-changed-wiz" rows="5">{{outline.character_changed}}</textarea>
+          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Porro sapiente quia est sint sed illum ea, aliquam iusto ab
+            veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum,
+            consectetur nam.</p>
+          <textarea
+            class="form-control"
+            id="character-changed-wiz"
+            rows="5"
+          >{{outline.character_changed}}</textarea>
         </div>
       </div>
     </div>
     <div style="overflow:auto;">
       <div style="float:right;">
-        <button class="btn btn-success mt-1 shadow-none" type="button" id="prev-btn">Previous</button>
-        <button class="btn btn-success mt-1 shadow-none" type="button" id="next-btn">Next</button>
+        <button
+          class="btn btn-success mt-1 shadow-none"
+          type="button"
+          id="prev-btn"
+        >Previous</button>
+        <button
+          class="btn btn-success mt-1 shadow-none"
+          type="button"
+          id="next-btn"
+        >Next</button>
       </div>
       <div style="float: left;">
-        <button class="btn btn-secondary mt-1 shadow-none" type="button" id="exit-btn">Exit</button>
+        <button
+          class="btn btn-secondary mt-1 shadow-none"
+          type="button"
+          id="exit-btn"
+        >Exit</button>
       </div>
     </div>
     <!-- Circles which indicates the steps of the form: -->
     <div class="step-indicator">
       {{#unless outline.title}}
-      <span class="step"></span>
+        <span class="step"></span>
       {{/unless}}
       <span class="step"></span>
       <span class="step"></span>
