@@ -84,25 +84,33 @@ async function saveNewOutline(event) {
 
   if (title) {
     try {
-      const response = await axios
-        .post("/api/outlines/", {
-          title,
-          comfort_zone,
-          character_desire,
-          new_situation,
-          character_adapts,
-          gets_desire,
-          heavy_price,
-          familiar_situation,
-          character_changed,
-        })
-        // Redirects the user to the outline page for the newly saved outline
-        .then((outlineData) => {
-          document.location.replace("/outline/" + outlineData.data.id);
-        });
+      const response = await axios.post("/api/outlines/", {
+        title,
+        comfort_zone,
+        character_desire,
+        new_situation,
+        character_adapts,
+        gets_desire,
+        heavy_price,
+        familiar_situation,
+        character_changed,
+      });
+      document.location.replace("/dashboard");
     } catch (err) {
       console.log(err);
     }
+  } else {
+    outlineTitleEl.classList.add("is-invalid");
+    document.body.scrollTop = 0;
+  }
+}
+
+function toggleVaild() {
+  if (outlineTitleEl.classList.contains("is-invalid")) {
+    outlineTitleEl.classList.remove("is-invalid");
+  }
+  if (outlineTitleEl.value.trim().length === 0) {
+    outlineTitleEl.classList.add("is-invalid");
   }
 }
 
@@ -139,6 +147,9 @@ async function saveOldOutline(event) {
     } catch (err) {
       console.log(err);
     }
+  } else {
+    outlineTitleEl.classList.add("is-invalid");
+    document.body.scrollTop = 0;
   }
 }
 
@@ -230,6 +241,8 @@ nextBtnEl.addEventListener("click", nextPrev);
 prevBtnEl.addEventListener("click", nextPrev);
 wizardBtnEl.addEventListener("click", wizardToggle);
 exitBtnEl.addEventListener("click", wizardToggle);
+
+outlineTitleEl.addEventListener("input", toggleVaild);
 
 //The following listeners synchronize changes between outline view and wizard view
 outlineTitleEl.addEventListener("change", function () {
