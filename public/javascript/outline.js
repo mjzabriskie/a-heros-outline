@@ -84,18 +84,22 @@ async function saveNewOutline(event) {
 
   if (title) {
     try {
-      const response = await axios.post("/api/outlines/", {
-        title,
-        comfort_zone,
-        character_desire,
-        new_situation,
-        character_adapts,
-        gets_desire,
-        heavy_price,
-        familiar_situation,
-        character_changed,
-      });
-      document.location.replace("/dashboard");
+      const response = await axios
+        .post("/api/outlines/", {
+          title,
+          comfort_zone,
+          character_desire,
+          new_situation,
+          character_adapts,
+          gets_desire,
+          heavy_price,
+          familiar_situation,
+          character_changed,
+        })
+        // Redirects the user to the outline page for the newly saved outline
+        .then((outlineData) => {
+          document.location.replace("/outline/" + outlineData.data.id);
+        });
     } catch (err) {
       console.log(err);
     }
@@ -188,7 +192,7 @@ function setStepIndicator(step) {
 
 //controls movement from tab to tab
 function nextPrev(event) {
-  let n;
+  let stepDirection;
 
   //Stops user from continuing past number of tabs
   if (
@@ -199,33 +203,33 @@ function nextPrev(event) {
     return;
   }
 
+  //Adds or subtracts 1 to control which direction the wizard goes
   if (event.target.id == "next-btn") {
-    n = 1;
+    stepDirection = 1;
   } else {
-    n = -1;
+    stepDirection = -1;
   }
-  // This function will figure out which tab to display
-  var x = document.getElementsByClassName("tab");
+  //Gets all tabs
+  const tabsArray = document.getElementsByClassName("tab");
+  //Gets all step indicators
+  const stepsArray = document.getElementsByClassName("step");
   // Exit the function if any field in the current tab is invalid:
-  if (n == 1 && !validateForm()) return false;
+  if (stepDirection == 1) {
+    stepsArray[currStep].className += " finish";
+  }
   // Hide the current tab:
-  x[currStep].style.display = "none";
+  tabsArray[currStep].style.display = "none";
   // Increase or decrease the current tab by 1:
-  currStep = currStep + n;
+  currStep = currStep + stepDirection;
 
-  // if you have reached the end of the form...
-  if (currStep >= x.length) {
-    // ... the form gets submitted:
+  //stops user from increasing step counter past existing number of steps
+  if (currStep >= tabsArray.length) {
+    //Forces user out of wizard
     outlineFormEl.classList.toggle("d-none");
     return false;
   }
   // Otherwise, display the correct tab:
   showStep(currStep);
-}
-
-function validateForm() {
-  document.getElementsByClassName("step")[currStep].className += " finish";
-  return true; // return the valid status
 }
 
 function wizardToggle() {
