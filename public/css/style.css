@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Merriweather', serif;
+}
+
 .bg-image {
     height: 500px;
 }
@@ -25,10 +29,7 @@
 #regForm {
     background-color: #ffffff;
     margin: 100px auto;
-    font-family: Raleway;
-    padding: 40px;
-    width: 70%;
-    min-width: 300px;
+    max-width: 1000px;
 }
 
 #regForm h1 {
@@ -44,11 +45,11 @@
 }
 
 /* Hide all steps by default: */
-#regForm.tadb {
+#regForm .tab {
     display: none;
 }
 
-#regForm button {
+/* #regForm button {
     background-color: #04AA6D;
     color: #ffffff;
     border: none;
@@ -56,14 +57,10 @@
     font-size: 17px;
     font-family: Raleway;
     cursor: pointer;
-}
+} */
 
 #regForm button:hover {
     opacity: 0.8;
-}
-
-#prevBtn {
-    background-color: #bbbbbb;
 }
 
 /* Make circles that indicate the steps of the form: */

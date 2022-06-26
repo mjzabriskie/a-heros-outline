@@ -120,73 +120,131 @@
     </div>
   </div>
 </div>
-<form id="regForm" action="">
-  <h1>Outline Wizard</h1>
+<form class="container" id="regForm" action="">
+  <h1 class="mb-4">Outline Wizard</h1>
   <!-- One "tab" for each step in the form: -->
-  <div class="tab" style="display: none;">Name:
-    <div class="form-group">
-      <label for="comfortZoneWiz">Comfort Zone</label>
-      <textarea class="form-control" id="comfortZoneWiz" rows="5">{{outline.comfort_zone}}</textarea>
+  <div class="col-12 mx-auto">
+    <div class="tab">
+      <div class="card">
+        <div class="text-center card-header">
+          <label class="h3" for="comfortZoneWiz">Step 1: Comfort Zone</label>
+        </div>
+        <div class="card-body">
+          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sapiente quia est sint sed
+            illum ea, aliquam iusto ab veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum, consectetur
+            nam.</p>
+          <textarea class="form-control" id="comfortZoneWiz" rows="5">{{outline.comfort_zone}}</textarea>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="tab" style="display: none;">Contact Info:
-    <div class="form-group">
-      <label for="characterDesireWiz">Character Desire</label>
-      <textarea class="form-control" id="characterDesireWiz" rows="5">{{outline.character_desire}}</textarea>
+    <div class="tab">
+      <div class="card">
+        <div class="text-center card-header">
+          <label class="h3" for="characterDesireWiz">Step 2: Character Desire</label>
+        </div>
+        <div class="card-body">
+          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sapiente quia est sint sed
+            illum ea, aliquam iusto ab veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum, consectetur
+            nam.</p>
+          <textarea class="form-control" id="characterDesireWiz" rows="5">{{outline.character_desire}}</textarea>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="tab" style="display: none;">Login Info:
-    <div class="form-group">
-      <label for="newSituationWiz">Enter Unfamiliar Situation</label>
-      <textarea class="form-control" id="newSituationWiz" rows="5">{{outline.new_situation}}</textarea>
+    <div class="tab">
+      <div class="card">
+        <div class="text-center card-header">
+          <label class="h3" for="newSituationWiz">Step 3: Enter Unfamiliar Situation</label>
+        </div>
+        <div class="card-body">
+          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sapiente quia est sint sed
+            illum ea, aliquam iusto ab veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum, consectetur
+            nam.</p>
+          <textarea class="form-control" id="newSituationWiz" rows="5">{{outline.new_situation}}</textarea>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="tab" style="display: none;">Birthday:
-    <div class="form-group">
-      <label for="characterAdaptsWiz">Character Adapts</label>
-      <textarea class="form-control" id="characterAdaptsWiz" rows="5">{{outline.character_adapts}}</textarea>
+    <div class="tab">
+      <div class="card">
+        <div class="text-center card-header">
+          <label class="h3" for="characterAdaptsWiz">Step 4: Character Adapts</label>
+        </div>
+        <div class="card-body">
+          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sapiente quia est sint sed
+            illum ea, aliquam iusto ab veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum, consectetur
+            nam.</p>
+          <textarea class="form-control" id="characterAdaptsWiz" rows="5">{{outline.character_adapts}}</textarea>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="tab" style="display: none;">Login Info:
-    <div class="form-group">
-      <label for="getsDesireWiz">Gets Desire</label>
-      <textarea class="form-control" id="getsDesireWiz" rows="5">{{outline.gets_desire}}</textarea>
+    <div class="tab">
+      <div class="card">
+        <div class="text-center card-header">
+          <label class="h3" for="getsDesireWiz">Step 5: Gets Desire</label>
+        </div>
+        <div class="card-body">
+          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sapiente quia est sint sed
+              illum ea, aliquam iusto ab veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum, consectetur
+              nam.</p>
+          <textarea class="form-control" id="getsDesireWiz" rows="5">{{outline.gets_desire}}</textarea>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="tab" style="display: none;">Login Info:
-    <div class="form-group">
-      <label for="heavyPriceWiz">Pay Heavy Price</label>
-      <textarea class="form-control" id="heavyPriceWiz" rows="5">{{outline.heavy_price}}</textarea>
+    <div class="tab">
+      <div class="card">
+        <div class="text-center card-header">
+          <label class="h3" for="heavyPriceWiz">Step 6: Pay Heavy Price</label>
+        </div>
+        <div class="card-body">
+          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sapiente quia est sint sed
+              illum ea, aliquam iusto ab veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum, consectetur
+              nam.</p>
+          <textarea class="form-control" id="heavyPriceWiz" rows="5">{{outline.heavy_price}}</textarea>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="tab" style="display: none;">Login Info:
-    <div class="form-group">
-      <label for="familiarSituationWiz">Return to Familiar Situation</label>
-      <textarea class="form-control" id="familiarSituationWiz" rows="5">{{outline.familiar_situation}}</textarea>
+    <div class="tab">
+      <div class="card">
+        <div class="text-center card-header">
+          <label class="h3" for="familiarSituationWiz">Step 7: Return to Familiar Situation</label>
+        </div>
+        <div class="card-body">
+          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sapiente quia est sint sed
+              illum ea, aliquam iusto ab veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum, consectetur
+              nam.</p>
+          <textarea class="form-control" id="familiarSituationWiz" rows="5">{{outline.familiar_situation}}</textarea>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="tab" style="display: none;">Login Info:
-    <div class="form-group">
-      <label for="characterChangedWiz">Character Changed</label>
-      <textarea class="form-control" id="characterChangedWiz" rows="5">{{outline.character_changed}}</textarea>
+    <div class="tab">
+      <div class="card">
+        <div class="text-center card-header">
+          <label class="h3" for="characterChangedWiz">Step 8: Character Changed</label>
+        </div>
+        <div class="card-body">
+          <p>Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sapiente quia est sint sed
+              illum ea, aliquam iusto ab veniam optio, atque sunt sequi aspernatur corporis adipisci! Earum, consectetur
+              nam.</p>
+          <textarea class="form-control" id="characterChangedWiz" rows="5">{{outline.character_changed}}</textarea>
+        </div>
+      </div>
     </div>
-  </div>
-  <div style="overflow:auto;">
-    <div style="float:right;">
-      <button type="button" id="prevBtn">Previous</button>
-      <button type="button" id="nextBtn">Next</button>
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <button class="btn btn-success mt-1 shadow-none" type="button" id="prevBtn">Previous</button>
+        <button class="btn btn-success mt-1 shadow-none" type="button" id="nextBtn">Next</button>
+      </div>
     </div>
-  </div>
-  <!-- Circles which indicates the steps of the form: -->
-  <div class="step-indicator">
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
+    <!-- Circles which indicates the steps of the form: -->
+    <div class="step-indicator">
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+    </div>
   </div>
 </form>
 <script src="/javascript/outline.js"></script>
