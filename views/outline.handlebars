@@ -1,4 +1,4 @@
-<div class="">
+<div class="d-none" id="outline-form">
   <div class="text-center">
     <h1>Outline</h1>
     <div class="row justify-content-center m-0">
@@ -9,6 +9,9 @@
     </div>
   </div>
   <div id="outlineSection" class="container">
+    <div class="d-flex mb-1 justify-content-end">
+      <button class="btn btn-dark wizard-btn" id="wizard-btn"><i class="fa-solid fa-hat-wizard"></i> Wizard</button>
+    </div>
     <div class="row">
       <div class="col-md-6">
         <div class="card mb-3">
@@ -120,7 +123,7 @@
     </div>
   </div>
 </div>
-<form class="container" id="regForm" action="">
+<form class="container d-none" id="wizard-form">
   <h1 class="mb-4">Outline Wizard</h1>
   <!-- One "tab" for each step in the form: -->
   <div class="col-12 mx-auto">
@@ -232,6 +235,9 @@
       <div style="float:right;">
         <button class="btn btn-success mt-1 shadow-none" type="button" id="prevBtn">Previous</button>
         <button class="btn btn-success mt-1 shadow-none" type="button" id="nextBtn">Next</button>
+      </div>
+      <div style="float: left;">
+        <button class="btn btn-secondary mt-1 shadow-none" type="button" id="exit-btn">Exit</button>
       </div>
     </div>
     <!-- Circles which indicates the steps of the form: -->

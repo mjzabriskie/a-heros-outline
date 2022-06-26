@@ -1,3 +1,12 @@
+const outlineForm = document.querySelector("#outline-form");
+const wizardForm = document.querySelector("#wizard-form");
+
+if (window.location.search) {
+  wizardForm.classList.toggle("d-none");
+} else {
+  outlineForm.classList.toggle("d-none");
+}
+
 function clearTextarea(event) {
   // Checks that the event target was a clear button
   if (!event.target.classList.contains("clear-btn")) {
@@ -135,7 +144,8 @@ function nextPrev(event) {
   // if you have reached the end of the form...
   if (currStep >= x.length) {
     // ... the form gets submitted:
-    document.getElementById("regForm").submit();
+    outlineForm.classList.toggle("d-none");
+    currStep = 0;
     return false;
   }
   // Otherwise, display the correct tab:
@@ -158,6 +168,11 @@ function fixStepIndicator(n) {
   x[n].className += " active";
 }
 
+function wizardToggle() {
+  wizardForm.classList.toggle("d-none");
+  outlineForm.classList.toggle("d-none");
+}
+
 document
   .querySelector("#outlineSection")
   .addEventListener("click", clearTextarea);
@@ -166,3 +181,5 @@ document
   .addEventListener("click", saveButtonHandler);
 document.querySelector("#nextBtn").addEventListener("click", nextPrev);
 document.querySelector("#prevBtn").addEventListener("click", nextPrev);
+document.querySelector("#wizard-btn").addEventListener("click", wizardToggle);
+document.querySelector("#exit-btn").addEventListener("click", wizardToggle);

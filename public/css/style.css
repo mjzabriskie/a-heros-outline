@@ -6,6 +6,14 @@ body {
     font-family: 'Merriweather', serif;
 }
 
+.wizard-btn {
+    background-color: #650094;
+}
+
+.wizard-btn:hover {
+    background-color: #650094d0;
+}
+
 .bg-image {
     height: 500px;
 }
@@ -26,17 +34,17 @@ body {
 
 
 
-#regForm {
+#wizard-form {
     background-color: #ffffff;
     margin: 100px auto;
     max-width: 1000px;
 }
 
-#regForm h1 {
+#wizard-form h1 {
     text-align: center;
 }
 
-#regForm input {
+#wizard-form input {
     padding: 10px;
     width: 100%;
     font-size: 17px;
@@ -45,11 +53,11 @@ body {
 }
 
 /* Hide all steps by default: */
-#regForm .tab {
+#wizard-form .tab {
     display: none;
 }
 
-/* #regForm button {
+/* #wizard-form button {
     background-color: #04AA6D;
     color: #ffffff;
     border: none;
@@ -59,12 +67,12 @@ body {
     cursor: pointer;
 } */
 
-#regForm button:hover {
+#wizard-form button:hover {
     opacity: 0.8;
 }
 
 /* Make circles that indicate the steps of the form: */
-#regForm .step {
+#wizard-form .step {
     height: 15px;
     width: 15px;
     margin: 0 2px;
@@ -75,12 +83,12 @@ body {
     opacity: 0.5;
 }
 
-#regForm .step.active {
+#wizard-form .step.active {
     opacity: 1;
 }
 
 /* Mark the steps that are finished and valid: */
-#regForm .finish {
+#wizard-form .finish {
     background-color: #04AA6D;
 }
 
