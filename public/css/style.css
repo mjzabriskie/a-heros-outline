@@ -6,6 +6,10 @@ body {
     font-family: 'Merriweather', serif;
 }
 
+main {
+    margin-top: 56px;
+}
+
 .wizard-btn {
     background-color: #650094;
 }
