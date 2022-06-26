@@ -10,6 +10,10 @@ main {
     margin-top: 56px;
 }
 
+.title-tab {
+    min-height: 230px;
+}
+
 .wizard-btn {
     background-color: #650094;
 }
@@ -61,16 +65,6 @@ main {
     display: none;
 }
 
-/* #wizard-form button {
-    background-color: #04AA6D;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 17px;
-    font-family: Raleway;
-    cursor: pointer;
-} */
-
 #wizard-form button:hover {
     opacity: 0.8;
 }
@@ -91,8 +85,7 @@ main {
     opacity: 1;
 }
 
-/* Mark the steps that are finished and valid: */
-#wizard-form .finish {
+#wizard-form .step.finish {
     background-color: #04AA6D;
 }
 
