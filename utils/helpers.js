@@ -18,11 +18,4 @@ module.exports = {
     // Returns false if the two times are the same
     return false;
   },
-  // Function for determining if a post (or comment) belongs to the logged in user
-  is_current_user: (postUser, currentUser) => {
-    if (postUser === currentUser) {
-      return true;
-    }
-    return false;
-  },
 };

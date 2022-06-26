@@ -34,11 +34,19 @@ router.get("/:id", withAuth, (req, res) => {
 
       const outline = outlineData.get({ plain: true });
 
-      // Will display the outline/:id page using the outline handlebars - currentUser is used to provide options specific to the current user, allowing them to modify their outlines and comments
-      res.render("outline", {
-        outline,
-        loggedIn: req.session.loggedIn,
-      });
+      // Checks if the outline belongs to the current user
+      return outline.user_id === req.session.user_id
+        ? // Will display the outline/:id page using the outline handlebars if the outline belongs to the current user
+          res.render("outline", {
+            outline,
+            loggedIn: req.session.loggedIn,
+          })
+        : // Otherwise checks if the user is logged in
+        req.session.user_id
+        ? // Redirects the user to their dashboard if they're logged in
+          res.redirect("/dashboard")
+        : // If the user is not logged in, they are redirected to the homepage
+          res.redirect("/");
     })
     // Basic error catching
     .catch((err) => res.status(500).json(err));
