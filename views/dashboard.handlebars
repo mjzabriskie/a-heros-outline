@@ -1,0 +1,21 @@
+<div class="text-center m-1">
+    <h1>Dashboard</h1>
+    <div id="outlineSection" class="row row-cols-1 row-cols-md-3 g-4 m-0">
+    {{#if outlines.length}}
+        {{#each outlines as |outline|}}
+        <div class="col">
+            {{> outline-info outline}}
+        </div>
+        {{/each}}
+    {{/if}}
+    </div>
+    <div class="row m-0">
+        <div class="col-sm-12">
+            <div class="d-grid gap-2 col-6 mx-auto text-center">
+                <button class="btn btn-success" id="singlebutton">Create New Outline <i
+                        class="fa-solid fa-square-plus"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/javascript/dashboard.js"></script>

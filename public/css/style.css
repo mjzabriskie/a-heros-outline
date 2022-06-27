@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+}
+
+main {
+    margin-top: 56px;
+}
+
+.title-tab {
+    min-height: 230px;
+}
+
+.btn-success, .btn-success:active, .btn-success:active, .btn-success:focus, .btn-success:visited {
+    background-color: #243eb1 !important;
+    border-color: #243eb1;
+}
+
+.btn-success:active {
+    box-shadow: 0px 0px 10px rgba(41,70,202,0.7) !important;
+}
+
+.btn-success:focus {
+    box-shadow: none;
+}
+
+.btn-success:hover {
+    background-color: #243eb1d0 !important;
+    border-color: #243eb1;
+}
+
+.btn-danger, .btn-danger:active, .btn-danger:active, .btn-danger:focus, .btn-danger:visited {
+    background-color: #b81d1d !important;
+    border-color: #b81d1d;
+}
+
+.btn-danger:active {
+    box-shadow: 0px 0px 10px rgba(184,29,29,0.7) !important;
+}
+
+.btn-danger:focus {
+    box-shadow: none;
+}
+
+.btn-danger:hover {
+    background-color: #b81d1dd0 !important;
+    border-color: #b81d1d;
+}
+
+.bg-image {
+    height: 660px;
+    background-image:url('/images/Hero-Homepage.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    width: 100%;
+    display: block;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#features i {
+    font-size: 72px;
+}
+
+#features p {
+    text-align: left;
+}
+
+#wizard-form {
+    background-color: #ffffff;
+    margin: 100px auto;
+    max-width: 1000px;
+}
+
+#wizard-form h1 {
+    text-align: center;
+}
+
+#wizard-form input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+}
+
+.wizard-btn {
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    background-size: 300% 100%;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.wizard-btn:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.wizard-btn:focus {
+    outline: none;
+}
+
+.wizard-btn.magic-color {
+    background-image: linear-gradient(to right, #243eb1, #852D91, #da7373, #b81d1d);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+
+.card-box {
+    max-width: 640px;
+}
+
+/* Hide all steps by default: */
+#wizard-form .tab {
+    display: none;
+}
+
+#wizard-form button:hover {
+    opacity: 0.8;
+}
+
+/* Make circles that indicate the steps of the form: */
+#wizard-form .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+#wizard-form .step.active {
+    opacity: 1;
+    background-color: #243eb1;
+}
+
+#wizard-form .step.finish {
+    background-color: #243eb1;
+}
+
+.step-indicator {
+    text-align:center;
+    margin-top:40px;
+}
