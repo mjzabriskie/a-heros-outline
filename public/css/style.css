@@ -23,7 +23,13 @@ main {
 }
 
 .bg-image {
-    height: 500px;
+    height: 660px;
+    background-image:url('/images/Hero-Homepage.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    width: 100%;
+    display: block;
 }
 
 .sticky {
@@ -39,8 +45,6 @@ main {
 #features p {
     text-align: left;
 }
-
-
 
 #wizard-form {
     background-color: #ffffff;
@@ -101,3 +105,5 @@ main {
 .none {
     display: none;
 }
+
+
