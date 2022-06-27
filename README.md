@@ -1,4 +1,5 @@
 # A Hero's Outline
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
@@ -7,20 +8,25 @@ A Hero's Outline provides an outlining tool for those interested in story creati
 
 ## Links
 
-[Code repository](https://github.com/wgrout87/a-heros-outline)
+[Code repository](https://github.com/mjzabriskie/a-heros-outline)
+[Deployed website](https://herooutline.herokuapp.com/)
 
 ## Table of Contents
 
-- [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
 
-## Installation
+The Homepage:
 
-This project has been deployed to Heroku at: (link here)
+![Homepage Screenshot](./public/images/homepage.png)
+
+The Dashboard:
+
+![Dashboard Screenshot](./public/images/dashboard.png)
+
+The Outline:
+
+![Outline Screenshot](./public/images/outline.png)
 
 ## Usage
 
@@ -28,7 +34,7 @@ To use A Hero's Outline, a user should first sign up for an account. Logging in 
 
 ## License
 
-Copyright 2022 William Grout
+Copyright 2022
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -37,19 +43,3 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)
-
-## Contributing
-
-Any contributions to this open source project on GitHub are welcome. The standard fork and pull workflow that Git enables is the best way to contribute.
-
-## Tests
-
-No tests have been created for this application.
-
-## Questions
-
-My GitHub Profile: [https://github.com/wgrout87](https://github.com/wgrout87)
-
-wgrout87@gmail.com
-
-Please feel free to email me with questions.

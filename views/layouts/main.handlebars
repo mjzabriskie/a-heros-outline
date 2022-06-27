@@ -30,88 +30,59 @@
     ></script>
   </head>
 
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <div
-          class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2"
-        >
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/#features">Features</a>
-            </li>
-            {{#if loggedIn}}
-              <li class="nav-item">
-                <a class="nav-link" href="/dashboard">Dashboard</a>
-              </li>
-            {{/if}}
-          </ul>
-        </div>
-        <div class="mx-auto order-0">
-          <a class="navbar-brand mx-auto" href="/">A Hero's Outline</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target=".dual-collapse2"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        {{#if loggedIn}}
-          <div
-            class="navbar-collapse collapse w-100 order-3 dual-collapse2 justify-content-end"
-          >
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <button
-                  id="logout"
-                  class="nav-link btn btn-dark"
-                >Logout</button>
-              </li>
-            </ul>
-          </div>
-          <script src="/javascript/logout.js"></script>
-        {{else}}
-          <div
-            class="navbar-collapse collapse w-100 order-3 dual-collapse2 justify-content-end"
-          >
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <span
-                  class="nav-link"
-                  role="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#loginModal"
-                >Login</span>
-              </li>
-            </ul>
-          </div>
-        {{/if}}
-      </nav>
-    </header>
-    <main class="h-100">
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="loginModal"
-        tabindex="-1"
-        aria-labelledby="login"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h3 class="modal-title" id="loginModalLabel">Login</h3>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" id="navbarToggleExternalContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#features">Features</a>
+          </li>
+          {{#if loggedIn}}
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard">Dashboard</a>
+          </li>
+          {{/if}}
+        </ul>
+      </div>
+      <div class="mx-auto order-0">
+        <a class="navbar-brand mx-auto" href="/">A Hero's Outline</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      {{#if loggedIn}}
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 justify-content-end" id="navbarToggleExternalContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <button id="logout" class="nav-link btn btn-dark">Logout</button>
+          </li>
+        </ul>
+      </div>
+      <script src="/javascript/logout.js"></script>
+      {{else}}
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 justify-content-end" id="navbarToggleExternalContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <span class="nav-link" role="button" data-bs-toggle="modal" data-bs-target="#loginModal">Login</span>
+          </li>
+        </ul>
+      </div>
+      {{/if}}
+    </nav>
+  </header>
+  <main>
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="login" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="loginModalLabel">Login</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          
             </div>
             <div class="modal-body" id="login">
               <form>
