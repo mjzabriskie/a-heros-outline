@@ -96,10 +96,7 @@ async function saveNewOutline(event) {
           familiar_situation,
           character_changed,
         })
-        // Redirects the user to the outline page for the newly saved outline
-        .then((outlineData) => {
-          document.location.replace("/outline/" + outlineData.data.id);
-        });
+          document.location.replace("/dashboard");
     } catch (err) {
       console.log(err);
     }
