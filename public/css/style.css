@@ -143,21 +143,14 @@ main {
 
 #wizard-form .step.active {
     opacity: 1;
+    background-color: #243eb1;
 }
 
 #wizard-form .step.finish {
-    background-color: #04AA6D;
+    background-color: #243eb1;
 }
 
 .step-indicator {
     text-align:center;
     margin-top:40px;
-}
-
-.block {
-    display: block;
-}
-
-.none {
-    display: none;
 }

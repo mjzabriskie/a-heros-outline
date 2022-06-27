@@ -109,7 +109,7 @@ async function saveNewOutline(event) {
   }
 }
 
-function toggleVaild() {
+function toggleValid() {
   if (outlineTitleEl.classList.contains("is-invalid")) {
     outlineTitleEl.classList.remove("is-invalid");
   }
@@ -160,19 +160,28 @@ async function saveOldOutline(event) {
 //Shows the whichever step number is passed in
 function showStep(step) {
   const tabsArray = document.getElementsByClassName("tab");
+  const tabInput = tabsArray[step].querySelector("input");
+  const tabTextArea = tabsArray[step].querySelector("textarea");
 
   tabsArray[step].style.display = "block";
 
+  //sets focus to active field after next or prev buttons are pressed
+  if (tabInput) {
+    tabInput.focus();
+  } else {
+    tabTextArea.focus();
+  }
+
   //Controls button visiblity and textContent depending on the step
   if (step == 0) {
-    document.getElementById("prev-btn").style.display = "none";
+    prevBtnEl.style.display = "none";
   } else {
-    document.getElementById("prev-btn").style.display = "inline";
+    prevBtnEl.style.display = "inline";
   }
   if (step == tabsArray.length - 1) {
-    document.getElementById("next-btn").textContent = "Finish";
+    nextBtnEl.textContent = "Finish";
   } else {
-    document.getElementById("next-btn").textContent = "Next";
+    nextBtnEl.textContent = "Next";
   }
   //calls function to set step indicator
   setStepIndicator(step);
@@ -213,11 +222,13 @@ function nextPrev(event) {
   const tabsArray = document.getElementsByClassName("tab");
   //Gets all step indicators
   const stepsArray = document.getElementsByClassName("step");
-  // Exit the function if any field in the current tab is invalid:
+
   if (stepDirection == 1) {
-    stepsArray[currStep].className += " finish";
+    stepsArray[currStep].classList.add("finish");
+  } else {
+    stepsArray[currStep].classList.remove("finish");
   }
-  // Hide the current tab:
+  // Hide the current tab
   tabsArray[currStep].style.display = "none";
   // Increase or decrease the current tab by 1:
   currStep = currStep + stepDirection;
@@ -246,14 +257,17 @@ prevBtnEl.addEventListener("click", nextPrev);
 wizardBtnEl.addEventListener("click", wizardToggle);
 exitBtnEl.addEventListener("click", wizardToggle);
 
-outlineTitleEl.addEventListener("input", toggleVaild);
+outlineTitleEl.addEventListener("input", toggleValid);
 
 //The following listeners synchronize changes between outline view and wizard view
-outlineTitleEl.addEventListener("change", function () {
-  outlineTitleWizEl.value = this.value;
-});
 if (outlineTitleWizEl) {
-  //handlebars helper determins if this element is created
+  //handlebars helper determines if this element is created
+  outlineTitleEl.addEventListener("change", function () {
+    outlineTitleWizEl.value = this.value;
+  });
+}
+if (outlineTitleWizEl) {
+  //handlebars helper determines if this element is created
   outlineTitleWizEl.addEventListener("change", function () {
     outlineTitleEl.value = this.value;
   });
