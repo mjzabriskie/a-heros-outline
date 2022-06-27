@@ -6,7 +6,7 @@ async function logout() {
   // Redirects the user to the homepage once they've logged out
     document.location.replace("/");
   } catch (err) {
-    console.log(err);
+    window.alert(err.response.data.message);
   }
 }
 
