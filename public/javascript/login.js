@@ -25,7 +25,7 @@ async function signUpFormHandler(event) {
       // Sends the new user to their dashboard
       document.location.replace("/dashboard");
     } catch (err) {
-      console.log(err);
+      window.alert(err.response.data.message);
     }
   }
   // Checks each input field and provides a visual alert for required fields that are empty
@@ -54,7 +54,7 @@ async function loginFormHandler(event) {
       // Sends the logged in user to their dashboard
       document.location.replace("/dashboard");
     } catch (err) {
-      console.log(err);
+      window.alert(err.response.data.message);
     }
   }
   // Checks each input field and provides a visual alert for required fields that are empty

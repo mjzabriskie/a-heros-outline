@@ -28,7 +28,10 @@ router.get("/:id", withAuth, (req, res) => {
     .then((outlineData) => {
       // Checks if the outline at the specified ID exists - renders an error page if it doesn't exist
       if (!outlineData) {
-        res.status(404).json({ message: "No outline found with that ID. " });
+        res.render("error", {
+          message: "404 - No outline was found with that ID.",
+          loggedIn: req.session.loggedIn
+        });
         return;
       }
 

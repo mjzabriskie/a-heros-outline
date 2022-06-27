@@ -13,7 +13,8 @@ async function deleteOutline(event) {
     const response = await axios.delete(fetchUrl);
     document.location.reload();
   } catch (err) {
-    console.log(err);
+    window.alert(err.response.data.message);
+    location.reload();
   }
 }
 

@@ -98,7 +98,7 @@ async function saveNewOutline(event) {
         })
           document.location.replace("/dashboard");
     } catch (err) {
-      console.log(err);
+      window.alert(err.response.data.message);
     }
   } else {
     outlineTitleEl.classList.add("is-invalid");
@@ -146,7 +146,7 @@ async function saveOldOutline(event) {
       });
       document.location.replace("/dashboard");
     } catch (err) {
-      console.log(err);
+      window.alert(err.response.data.message);
     }
   } else {
     outlineTitleEl.classList.add("is-invalid");
